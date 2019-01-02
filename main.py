@@ -30,7 +30,10 @@ def main():
 #     upsampled_img_skimage = upsample_skimage(factor=3, input_img=img)
 #     io.imshow(upsampled_img_skimage, interpolation='none')
 #     io.show()
-    bilinearInter = BilinearInterpolation(None, None)
+    bilinearInter = BilinearInterpolation(factor=3, input_img=img)
+    out = bilinearInter.up_sample()
+    io.imshow(out)
+    io.plot()
 
 if __name__ == '__main__':
     main()
